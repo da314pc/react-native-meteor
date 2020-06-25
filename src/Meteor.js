@@ -90,9 +90,9 @@ module.exports = {
     });
 
     NetInfo.addEventListener(state => {
-      if (isConnected && Data.ddp.autoReconnect) {
-        Data.ddp.connect();
-      }
+        if (state.isConnected && Data.ddp.autoReconnect) {
+             Data.ddp.connect();
+         }
     });
 
     Data.ddp.on('connected', () => {
