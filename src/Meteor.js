@@ -1,5 +1,4 @@
-import { Platform, View } from 'react-native';
-import NetInfo from '@react-native-community/netinfo';
+import { NetInfo, Platform, View } from 'react-native';
 
 import reactMixin from 'react-mixin';
 import Trackr from 'trackr';
@@ -89,8 +88,8 @@ module.exports = {
       ...options,
     });
 
-    NetInfo.addEventListener(({type, isConnected, isInternetReachable, isWifiEnabled}) => {
-        if (isConnected && Data.ddp.autoReconnect) {
+    NetInfo.isConnected.addEventListener('connectionChange', isConnected => {
+      if (isConnected && Data.ddp.autoReconnect) {
              Data.ddp.connect();
          }
     });
