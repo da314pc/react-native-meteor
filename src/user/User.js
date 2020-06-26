@@ -27,7 +27,7 @@ module.exports = {
       this.handleLogout();
       this.connect();
 
-      typeof callback == 'function' && callback(err, result);
+      typeof callback == 'function' && callback(err);
     });
   },
   handleLogout() {
@@ -75,7 +75,7 @@ module.exports = {
 
       this._handleLoginCallback(err, result);
 
-      typeof callback == 'function' && callback(err, result);
+      typeof callback == 'function' && callback(err);
     });
   },
   _startLoggingIn() {
@@ -107,7 +107,7 @@ module.exports = {
       call('login', { resume: value }, (err, result) => {
         this._endLoggingIn();
         this._handleLoginCallback(err, result);
-        typeof callback == 'function' && callback(err, result);
+        typeof callback == 'function' && callback(err);
       });
     } else {
       this._endLoggingIn();
