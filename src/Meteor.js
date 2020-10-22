@@ -17,6 +17,7 @@ import MeteorComplexListView from './components/ComplexListView';
 import createContainer from './components/createContainer';
 import withTracker from './components/ReactMeteorData';
 import composeWithTracker from './components/composeWithTracker';
+import useTracker from './components/useTracker';
 
 import FSCollection from './CollectionFS/FSCollection';
 import FSCollectionImagesPreloader from './CollectionFS/FSCollectionImagesPreloader';
@@ -43,6 +44,7 @@ module.exports = {
   FSCollection,
   createContainer,
   withTracker,
+  useTracker,
   getData() {
     return Data;
   },
