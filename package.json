@@ -44,7 +44,7 @@
     "underscore": "^1.8.3",
     "wolfy87-eventemitter": "^4.3.0",
     "@react-native-community/netinfo": "5.9.2",
-    "@react-native-community/async-storage": "^1.11.0"  
+    "@react-native-async-storage/async-storage": "^1.11.0"  
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
